@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span>My First MEAN app</span>
+  <span class="example-spacer"></span>
+  <ul>
+    <li *ngIf="isAuthenticated">
+      <a routerLink="/addPost" routerLinkActive="mat-accent" mat-button
+        >Add Post</a
+      >
+    </li>
+    <li *ngIf="!isAuthenticated">
+      <a routerLink="/login" routerLinkActive="mat-accent" mat-button>Login</a>
+    </li>
+    <li *ngIf="!isAuthenticated">
+      <a routerLink="/signup" routerLinkActive="mat-accent" mat-button
+        >Signup</a
+      >
+    </li>
+    <li *ngIf="isAuthenticated">
+      <button mat-button color="secondary" (click)="logout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
